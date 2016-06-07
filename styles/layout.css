@@ -2,7 +2,7 @@
   max-width: 80%;
 }
 
-header::after {
+.page-header::after {
   content: "";
   display: table;
   clear: both;
