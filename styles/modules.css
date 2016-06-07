@@ -5,11 +5,13 @@
 
 .main-title {
   font-size: 2em;
+  color: #fff;
 }
 
 .second-title {
   font-size: 1em;
   font-style: italic;
+  color: #fff;
 }
 
 .icon-menu {
@@ -62,9 +64,6 @@
   }
 }
 
-
-footer {
-  height: 2em;
-  padding: 1em;
-  border-top: 1px solid #3c3c3c;
+.template {
+  display: none;
 }
