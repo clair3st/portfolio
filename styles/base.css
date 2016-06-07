@@ -1,0 +1,43 @@
+body{
+  font-size: 100%;
+  color: #3c3c3c;
+  background-color: #fff;
+}
+
+header, footer {
+  background: #945D60;
+  color: #fff;
+}
+
+
+/*TEXT STYLES
+=========================================*/
+p{
+  font-size: 1em;
+  color: #3c3c3c;
+}
+
+h1{
+  font-size: 1.5em;
+}
+
+h2{
+  font-size: 1em;
+}
+
+article{
+  border-bottom: 2px solid #3c3c3c;
+  margin: 0 2.5%;
+}
+
+/*LINK STYLES
+=======================================*/
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover, a:focus {
+  color: #6EB4ED;
+}
