@@ -1,0 +1,51 @@
+body{
+  font-size: 100%;
+  color: #3c3c3c;
+  background-color: #fff;
+}
+
+header {
+  background-image:
+  linear-gradient(rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)), url('../img/trees.png');
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 15%;
+
+}
+
+
+/*TEXT STYLES
+=========================================*/
+p{
+  font-size: 1em;
+  color: #3c3c3c;
+}
+
+h1{
+  font-size: 1.5em;
+  color: #6EB4ED;
+}
+
+h2{
+  font-size: 1em;
+  color: #6EB4ED;
+}
+
+article{
+  border-bottom: 2px solid #3c3c3c;
+  margin: 0 2.5%;
+}
+
+/*LINK STYLES
+=======================================*/
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover, a:focus {
+  color: #6EB4ED;
+}

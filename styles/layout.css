@@ -1,0 +1,9 @@
+.header-title {
+  max-width: 80%;
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
