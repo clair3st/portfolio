@@ -34,10 +34,34 @@
 
 .main-nav li {
   margin-right: .4em;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  font-weight: bolder;
   padding: .5em .2em;
-  border-bottom: 1px solid #3c3c3c;
+  border: 1px solid #fff;
+  border-radius: 10%;
+  max-width: 70%;
 }
+
+@media only screen and (min-width: 640px) {
+  .icon-menu{
+    display: none;
+    }
+
+  .main-nav li {
+    display: inline-block;
+    clear: both;
+    padding: .5em 1em;
+    }
+
+  .main-nav ul {
+    display: block;
+  }
+
+  .main-nav:hover ul {
+    display: block;
+  }
+}
+
 
 footer {
   height: 2em;
