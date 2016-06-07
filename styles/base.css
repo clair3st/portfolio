@@ -31,11 +31,22 @@ h1{
 h2{
   font-size: 1em;
   color: #6EB4ED;
+  font-style: italic;
 }
 
 article{
   border-bottom: 2px solid #3c3c3c;
   margin: 0 2.5%;
+}
+
+footer {
+  height: 2em;
+  padding: 1em;
+  border-top: 1px solid #3c3c3c;
+}
+
+time {
+  font-weight: bold;
 }
 
 /*LINK STYLES
