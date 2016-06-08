@@ -12,7 +12,7 @@ function Article(opts) {
 //define a method to render article information to DOM
 Article.prototype.toHtml = function(){
   var $newArticle = $('article.template').clone();
-  // $newArticle.attr('data-category', this.continent);
+  $newArticle.attr('data-category', this.continent);
   $newArticle.find('h1').html(this.country);
   $newArticle.find('h2').html(this.continent);
   $newArticle.find('time').attr('pubdate', this.firstVisit);
