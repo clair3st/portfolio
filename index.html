@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/icon.css">
@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="styles/modules.css">
   </head>
   <body>
-    <header class="clearfix">
+    <header class="clearfix page-header">
       <section class="header-title">
         <h1 class="main-title"> Claire Gatenby </h1>
-        <h2 class="second-title"> A professional portfolio</h2>
+        <h2 class="second-title"> countries I've visited</h2>
       </section>
       <nav class="main-nav">
         <div class="icon-menu"></div>
@@ -25,21 +25,24 @@
       </nav>
     </header>
     <main>
-      <article>
-        <h1> Work Experience</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-
-        <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. </p>
-      </article>
-      <article>
-        <h1>Interests</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-
-        <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. </p>
-      </article>
+      <section id="articles-section">
+        <article class="template" data-category="">
+          <header>
+            <h1>Country Name</h1>
+            <h2>Continent</h2>
+            <span class="visited-date">
+              <time pubdate datetime="2000-01-01">date</time>
+            </span>
+          </header>
+          <section class='body-content'></section>
+        </article>
+      </section>
     </main>
     <footer>
       &copy; 2016 Claire Gatenby
     </footer>
+    <script src="vendor/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="scripts/page-data.js" type="text/javascript"></script>
+    <script src="scripts/render-data.js" type="text/javascript"></script>
   </body>
 </html>
