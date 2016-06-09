@@ -15,10 +15,22 @@ pageView.populateFilter = function() {
     var optionTag = '<option value="' + val + '">' + val + '</option>';
     if ($('#continent-filter option[value="' + val + '"]').length === 0) {
       $('#continent-filter').append(optionTag);
-      console.log(val);
+    }
+  });
+};
+
+pageView.handleContinentFilter = function() {
+  $('#continent-filter').on('change', function(){
+    if ($(this).val()) {
+      var val = $(this).val();
+      $('article').hide();
+      $('article[data-category="' + val + '"]').fadeIn();
+    } else {
+      $('artile').not('.template').show();
     }
   });
 };
 
 pageView.handleMainNav();
 pageView.populateFilter();
+pageView.handleContinentFilter();
