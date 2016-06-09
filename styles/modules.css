@@ -65,10 +65,6 @@
   }
 }
 
-.template {
-  display: none;
-}
-
 .profile {
   height: 100px;
   width: 100px;
@@ -79,6 +75,6 @@
   padding: 2em;
 }
 
-#about {
-  margin: 1em 1.5em 10em 1.5em;
+.read-on {
+  color: #6EB4ED;
 }
