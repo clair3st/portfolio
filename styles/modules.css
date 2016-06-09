@@ -4,14 +4,15 @@
 }
 
 .main-title {
-  font-size: 2em;
+  font-size: 3em;
   color: #fff;
 }
 
 .second-title {
-  font-size: 1em;
+  font-size: 1.5em;
   font-style: italic;
   color: #fff;
+  font-family: 'Sansita One', cursive;
 }
 
 .icon-menu {
@@ -71,6 +72,7 @@
 .profile {
   height: 100px;
   width: 100px;
+  float: left;
 }
 
 #filters {
@@ -78,5 +80,5 @@
 }
 
 #about {
-  margin:1.5em;
+  margin: 1em 1.5em 10em 1.5em;
 }
