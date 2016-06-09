@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Sansita+One|Kameron' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/icon.css">
@@ -9,12 +10,12 @@
     <link rel="stylesheet" href="styles/modules.css">
   </head>
   <script id="article-template" type="text/x-handlebars-template">
-    <article class="template" data-category="{{continent}}">
+    <article data-category="{{continent}}">
       <header>
         <h1>{{country}}</h1>
         <h2>{{continent}}</h2>
         <span class="visited-date">
-          <time pubdate datetime="2000-01-01">date</time>
+          <time pubdate datetime="2000-01-01">visited about {{firstVisit}} days ago</time>
         </span>
       </header>
       <section class="article-body">{{{body}}}</section>
