@@ -26,11 +26,23 @@ pageView.handleContinentFilter = function() {
       $('article').hide();
       $('article[data-category="' + val + '"]').fadeIn();
     } else {
-      $('artile').not('.template').show();
+      $('article').not('.template').show();
     }
   });
+};
+
+pageView.setTeasers = function() {
+  var $hiddenBody = $('.article-body *:nth-of-type(2)');
+  $hiddenBody.hide();
+  $('article').on('click','.read-on', function(){
+    $(this).prev().children().show();
+    $(this).html('');
+    return false;
+  });
+
 };
 
 pageView.handleMainNav();
 pageView.populateFilter();
 pageView.handleContinentFilter();
+pageView.setTeasers();
