@@ -2,17 +2,20 @@ body{
   font-size: 100%;
   color: #3c3c3c;
   background-color: #fff;
+  font-family: 'Kameron', serif;
+  position: relative;
 }
 
-.page-header {
+
+
+.page-header, footer {
   background-image:
   linear-gradient(rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)), url('../img/trees.png');
   color: #fff;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 15%;
-
+  padding-bottom: 15%;
 }
 
 
@@ -26,6 +29,7 @@ p{
 h1{
   font-size: 1.5em;
   color: #6EB4ED;
+  font-family: 'Sansita One', cursive;
 }
 
 h2{
