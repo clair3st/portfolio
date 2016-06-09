@@ -16,7 +16,7 @@ Article.prototype.toHtml = function(){
   $newArticle.find('h1').html(this.country);
   $newArticle.find('h2').html(this.continent);
   $newArticle.find('time').attr('pubdate', this.firstVisit);
-  $newArticle.find('.body-content').html(this.body);
+  $newArticle.find('.article-body').html(this.body);
 
   //display date as a relative number of 'days ago':
   $newArticle.find('time[pubdate]').attr('title', this.firstVisit);

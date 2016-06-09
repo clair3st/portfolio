@@ -67,3 +67,16 @@
 .template {
   display: none;
 }
+
+.profile {
+  height: 100px;
+  width: 100px;
+}
+
+#filters {
+  padding: 2em;
+}
+
+#about {
+  margin:1.5em;
+}
