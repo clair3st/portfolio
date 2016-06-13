@@ -2,17 +2,8 @@ body{
   font-size: 100%;
   color: #3c3c3c;
   background-color: #fff;
-}
-
-.page-header {
-  background-image:
-  linear-gradient(rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)), url('../img/trees.png');
-  color: #fff;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 15%;
-
+  font-family: 'Kameron', serif;
+  position: relative;
 }
 
 
@@ -26,6 +17,7 @@ p{
 h1{
   font-size: 1.5em;
   color: #6EB4ED;
+  font-family: 'Sansita One', cursive;
 }
 
 h2{
@@ -35,8 +27,7 @@ h2{
 }
 
 article{
-  border-bottom: 2px solid #3c3c3c;
-  margin: 0 2.5%;
+  margin: 2.5%;
 }
 
 footer {
@@ -58,9 +49,5 @@ a, a:link, a:active {
 }
 
 a:hover, a:focus {
-  color: #6EB4ED;
-}
-
-.read-on {
   color: #6EB4ED;
 }

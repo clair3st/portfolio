@@ -2,17 +2,31 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Sansita+One|Kameron' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/icon.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
   </head>
+  <script id="article-template" type="text/x-handlebars-template">
+    <article data-category="{{continent}}">
+      <header>
+        <h1>{{country}}</h1>
+        <h2>{{continent}}</h2>
+        <span class="visited-date">
+          <time pubdate datetime="2000-01-01">visited about {{firstVisit}} days ago</time>
+        </span>
+      </header>
+      <section class="article-body">{{{body}}}</section>
+      <a href="#" class="read-on">Read on &rarr;</a>
+    </article>
+  </script>
   <body>
     <header class="clearfix page-header">
       <section class="header-title">
         <h1 class="main-title"> Claire Gatenby </h1>
-        <h2 class="second-title"> countries I've visited</h2>
+        <h2 class="second-title">countries I've visited</h2>
       </section>
       <nav class="main-nav">
         <div class="icon-menu"></div>
@@ -27,21 +41,11 @@
     <main>
       <section id="articles-section" class="tab-content">
         <div id="filters">
-              <select id="continent-filter">
-                <option value="">-- Filter by Continent --</option>
-              </select>
+          <select id="continent-filter">
+            <option value="">-- Filter by Continent --</option>
+          </select>
         </div>
-        <article class="template" data-category="">
-          <header>
-            <h1>Country Name</h1>
-            <h2>Continent</h2>
-            <span class="visited-date">
-              <time pubdate datetime="2000-01-01">date</time>
-            </span>
-          </header>
-          <section class="article-body"></section>
-          <a href="#" class="read-on">Read on &rarr;</a>
-        </article>
+
       </section>
       <section id="about" class="tab-content" class="container">
         <h1>About Me</h1>
@@ -53,6 +57,7 @@
       &copy; 2016 Claire Gatenby
     </footer>
     <script src="vendor/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
     <script src="scripts/page-data.js" type="text/javascript"></script>
     <script src="scripts/render-data.js" type="text/javascript"></script>
     <script src="scripts/page-view.js" type="text/javascript"></script>

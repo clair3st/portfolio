@@ -4,14 +4,15 @@
 }
 
 .main-title {
-  font-size: 2em;
+  font-size: 3em;
   color: #fff;
 }
 
 .second-title {
-  font-size: 1em;
+  font-size: 1.5em;
   font-style: italic;
   color: #fff;
+  font-family: 'Sansita One', cursive;
 }
 
 .icon-menu {
@@ -64,19 +65,16 @@
   }
 }
 
-.template {
-  display: none;
-}
-
 .profile {
   height: 100px;
   width: 100px;
+  float: left;
 }
 
 #filters {
   padding: 2em;
 }
 
-#about {
-  margin:1.5em;
+.read-on {
+  color: #6EB4ED;
 }

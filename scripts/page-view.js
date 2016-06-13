@@ -32,14 +32,19 @@ pageView.handleContinentFilter = function() {
 };
 
 pageView.setTeasers = function() {
-  var $hiddenBody = $('.article-body *:nth-of-type(2)');
+  var $hiddenBody = $('.article-body *:nth-of-type(n+2)');
   $hiddenBody.hide();
   $('article').on('click','.read-on', function(){
-    $(this).prev().children().show();
-    $(this).html('');
+    console.log($(this).html());
+    if ($(this).html() === $('.read-on').html()) {
+      $(this).prev().children().show();
+      $(this).html('&larr; Show less');
+    } else {
+      $(this).prev().children('*:nth-of-type(n+2)').hide();
+      $(this).html('Read on &rarr;');
+    }
     return false;
   });
-
 };
 
 pageView.handleMainNav();
