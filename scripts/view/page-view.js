@@ -38,7 +38,7 @@
   };
 
   pageView.renderIndexPage = function() {
-    Article.arrayAll.forEach(function(a) {
+    Country.arrayAll.forEach(function(a) {
       $('#articles-section').append(a.toHtml());
       var val = $(a.category).find('h2').text();
       var optionTag = '<option value="' + val + '">' + val + '</option>';
@@ -51,7 +51,7 @@
     pageView.setTeasers();
   };
 
-  Article.fetchAll(pageView.renderIndexPage);
+  Country.fetchAll(pageView.renderIndexPage);
 
   module.pageView = pageView;
 
