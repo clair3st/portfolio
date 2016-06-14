@@ -22,8 +22,7 @@ pageView.handleContinentFilter = function() {
 };
 
 pageView.setTeasers = function() {
-  var $hiddenBody = $('.article-body *:nth-of-type(n+2)');
-  $hiddenBody.hide();
+  $('.article-body *:nth-of-type(n+2)').hide();
   $('article').on('click','.read-on', function(){
     console.log($(this).html());
     if ($(this).html() === $('.read-on').html()) {
@@ -38,7 +37,7 @@ pageView.setTeasers = function() {
 };
 
 pageView.renderIndexPage = function() {
-  Article.all.forEach(function(a) {
+  Article.arrayAll.forEach(function(a) {
     $('#articles-section').append(a.toHtml());
     var val = $(a.category).find('h2').text();
     var optionTag = '<option value="' + val + '">' + val + '</option>';
