@@ -1,16 +1,10 @@
+//define object constructor to store data in
 function Article (opts) {
   for (keys in opts) {
     this[keys] = opts[keys];
   }
 }
-Article.all = [];
-//define object constructor to store data in
-// function Article(opts) {
-//   this.country = opts.country;
-//   this.continent = opts.continent;
-//   this.firstVisit = opts.firstVisit;
-//   this.body = opts.body;
-// }
+Article.arrayAll = [];
 
 //define a method to render article information to DOM
 Article.prototype.toHtml = function() {
@@ -26,7 +20,7 @@ Article.loadAll = function(dataWePassIn) {
   dataWePassIn.sort(function(a,b) {
     return (new Date(b.firstVisit)) - (new Date(a.firstVisit));
   }).forEach(function(ele){
-    Article.all.push(new Article(ele));
+    Article.arrayAll.push(new Article(ele));
   });
 };
 
