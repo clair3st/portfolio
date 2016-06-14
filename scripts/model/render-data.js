@@ -1,11 +1,11 @@
 (function (module) {
 //define object constructor to store data in
   function Country (opts) {
-    console.log('opts ', opts);
+    // console.log('opts ', opts);
     for (keys in opts) {
       this[keys] = opts[keys];
-      console.log('this[keys] ', this[keys]);
-      console.log('opts[keys] ', opts[keys]);
+      // console.log('this[keys] ', this[keys]);
+      // console.log('opts[keys] ', opts[keys]);
     }
   }
   Country.arrayAll = [];
@@ -21,10 +21,10 @@
 
   //sort data by date first visited
   Country.loadAll = function(dataWePassIn) {
-    dataWePassIn.sort(function(a,b) {
+    Country.arrayAll = dataWePassIn.sort(function(a,b) {
       return (new Date(b.firstVisit)) - (new Date(a.firstVisit));
-    }).forEach(function(ele){
-      Country.arrayAll.push(new Country(ele));
+    }).map(function(ele){
+      return new Country(ele);
     });
   };
 
@@ -56,6 +56,18 @@
       localStorage.pageData = JSON.stringify(data);
       nextFunction();
     });
+  };
+
+  Country.allContinents = function() {
+    return Country.arrayAll.map(function(country){
+      return country.continent;
+    })
+    .reduce(function(newArr, cur) {
+      if (newArr.indexOf(cur) < 0) {
+        newArr.push(cur);
+      };
+      return newArr;
+    },[]);
   };
 
   module.Country = Country;
