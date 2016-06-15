@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/icon.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-  </head>
+
   <script id="article-template" type="text/x-handlebars-template">
     <article data-category="{{continent}}">
       <header>
@@ -22,6 +22,12 @@
       <a href="#" class="read-on">Read on &rarr;</a>
     </article>
   </script>
+
+  <script id="continentStats-template" type="text/x-handlebars-template">
+    <li><strong>{{continent}}</strong>: {{numWords}} words written</li>
+  </script>
+
+  </head>
   <body>
     <header class="clearfix page-header">
       <section class="header-title">
@@ -57,6 +63,7 @@
             <li class="continents"></li>
             <li>Total words written per continent:</li>
             <li class="wordswritten"></li>
+            <li><ul class="continent-stats"></ul></li>
           </ul>
       </section>
       <section id="about" class="tab-content" class="container">
