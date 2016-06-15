@@ -70,6 +70,23 @@
     },[]);
   };
 
+  Country.numWordsByContinent = function(){
+    return Country.allContinents().map(function(continent) {
+      return {
+        continent: continent,
+        numWords: Country.arrayAll.filter(function(curCountry){
+          return curCountry.continent === continent;
+        })
+        .map(function(country) {
+          return country.body.match(/\w+/g).length;
+        })
+        .reduce(function(newArr, cur) {
+          return newArr + cur;
+        })
+      };
+    });
+  };
+
   module.Country = Country;
 
 })(window);
