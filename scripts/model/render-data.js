@@ -64,7 +64,7 @@
       if (!acc.includes(cur)) {
         acc.push(cur);
       };
-      return newArr;
+      return acc;
     },[]);
   };
 
