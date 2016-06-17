@@ -61,7 +61,7 @@
       return country.continent;
     })
     .reduce(function(newArr, cur) {
-      if (newArr.indexOf(cur) < 0) {
+      if (newArr.inclues(cur)) {
         newArr.push(cur);
       };
       return newArr;
