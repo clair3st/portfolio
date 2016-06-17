@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/icon.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-  </head>
+
   <script id="article-template" type="text/x-handlebars-template">
     <article data-category="{{continent}}">
       <header>
@@ -22,6 +22,12 @@
       <a href="#" class="read-on">Read on &rarr;</a>
     </article>
   </script>
+
+  <script id="continentStats-template" type="text/x-handlebars-template">
+    <li><strong>{{continent}}</strong>: {{numWords}} words written</li>
+  </script>
+
+  </head>
   <body>
     <header class="clearfix page-header">
       <section class="header-title">
@@ -32,6 +38,7 @@
         <div class="icon-menu"></div>
         <ul>
           <li class="tab" data-content="articles-section"><a href="#" class="icon-home"> Portfolio</a></li>
+          <li class='tab' data-content="funFacts"><a href="#" class="icon-lab">Fun Facts</a></li>
           <li class="tab" data-content="about"><a href="#" class="icon-lab"> About Me</a></li>
           <li><a href="http://github.com/" class="icon-github"> GitHub</a></li>
           <li><a href="https://www.linkedin.com/" class="icon-linkedin"> LinkedIn</a></li>
@@ -47,6 +54,18 @@
         </div>
 
       </section>
+      <section id="funFacts" class="tab-content">
+        <h1>Fun Facts</h1>
+          <ul>
+            <li>Total Countries:</li>
+            <li class="countries"></li>
+            <li>Total Continents:</li>
+            <li class="continents"></li>
+            <li>Total words written per continent:</li>
+            <li class="wordswritten"></li>
+            <li><ul class="continent-stats"></ul></li>
+          </ul>
+      </section>
       <section id="about" class="tab-content" class="container">
         <h1>About Me</h1>
         <img class="profile" src="img/leiden pic.jpg">
@@ -61,5 +80,6 @@
 
     <script src="scripts/model/render-data.js" type="text/javascript"></script>
     <script src="scripts/view/page-view.js" type="text/javascript"></script>
+    <script src="scripts/view/funfacts-view.js" type="text/javascript"></script>
   </body>
 </html>
