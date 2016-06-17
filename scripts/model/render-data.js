@@ -60,9 +60,9 @@
     return Country.arrayAll.map(function(country){
       return country.continent;
     })
-    .reduce(function(newArr, cur) {
-      if (newArr.inclues(cur)) {
-        newArr.push(cur);
+    .reduce(function(acc, cur) {
+      if (!acc.includes(cur)) {
+        acc.push(cur);
       };
       return newArr;
     },[]);
