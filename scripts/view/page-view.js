@@ -38,9 +38,8 @@
   pageView.renderIndexPage = function() {
     Country.arrayAll.forEach(function(a) {
       $('#articles-section').append(a.toHtml());
-      var val = $(a.category).find('h2').text();
-      var optionTag = '<option value="' + val + '">' + val + '</option>';
-      if ($('#continent-filter option[value="' + val + '"]').length === 0) {
+      var optionTag = '<option value="' + a.continent + '">' + a.continent + '</option>';
+      if ($('#continent-filter option[value="' + a.continent + '"]').length === 0) {
         $('#continent-filter').append(optionTag);
       };
     });
