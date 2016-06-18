@@ -1,13 +1,11 @@
 (function (module) {
-//define object constructor to store data in
+//object constructor to store data in
   function Country (opts) {
-    // console.log('opts ', opts);
-    for (keys in opts) {
-      this[keys] = opts[keys];
-      // console.log('this[keys] ', this[keys]);
-      // console.log('opts[keys] ', opts[keys]);
-    }
+    Object.keys(opts).forEach(function(prop){
+      this[prop] = opts[prop];
+    },this);
   }
+
   Country.arrayAll = [];
 
   //define a method to render article information to DOM
@@ -62,11 +60,11 @@
     return Country.arrayAll.map(function(country){
       return country.continent;
     })
-    .reduce(function(newArr, cur) {
-      if (newArr.indexOf(cur) < 0) {
-        newArr.push(cur);
+    .reduce(function(acc, cur) {
+      if (!acc.includes(cur)) {
+        acc.push(cur);
       };
-      return newArr;
+      return acc;
     },[]);
   };
 
