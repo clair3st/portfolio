@@ -53,8 +53,8 @@
   pageView.funFactsSection = function() {
     var template = Handlebars.compile($('#continentStats-template').html());
 
-    Country.numWordsByContinent().forEach(function(stat) {
-      $('.continent-stats').append(template(stat));
+    Country.numCountriesByContinent().forEach(function(cur) {
+      $('.continent-stats').append(template(cur));
     });
 
     $('.countries').text(Country.arrayAll.length);
