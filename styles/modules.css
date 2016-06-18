@@ -78,3 +78,11 @@
 .read-on {
   color: #6EB4ED;
 }
+
+.stat-list {
+  list-style: none;
+}
+
+#funFacts {
+  margin: 2em;
+}
