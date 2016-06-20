@@ -24,7 +24,7 @@
     $('.article-body *:nth-of-type(n+2)').hide();
     $('article').on('click','.read-on', function(){
       console.log($(this).html());
-      if ($(this).html() === $('.read-on').html()) {
+      if ($(this).text() === 'Read on →') {
         $(this).prev().children().show();
         $(this).html('&larr; Show less');
       } else {
@@ -46,9 +46,8 @@
     pageView.handleMainNav();
     pageView.handleContinentFilter();
     pageView.setTeasers();
+    pageView.funFactsSection();
   };
-
-  Country.fetchAll(pageView.renderIndexPage);
 
   pageView.funFactsSection = function() {
     var template = Handlebars.compile($('#continentStats-template').html());
@@ -61,7 +60,9 @@
     $('.continents').text(Country.allContinents().length);
   };
 
-  Country.fetchAll(pageView.funFactsSection);
+  Country.fetchAll(pageView.renderIndexPage);
+
+  // Country.fetchAll(pageView.funFactsSection);
   module.pageView = pageView;
 
 })(window);
