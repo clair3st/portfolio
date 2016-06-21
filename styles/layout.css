@@ -20,6 +20,7 @@
 
 #about {
   margin: 1em 1.5em 10em 1.5em;
+  width: 90%;
 }
 
 .template {
@@ -28,4 +29,8 @@
 
 article:not(:last-child) {
   border-bottom: 2px solid #3c3c3c;
+}
+
+#github-info {
+  margin-top: 5em;
 }
