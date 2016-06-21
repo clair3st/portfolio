@@ -69,6 +69,8 @@
   height: 100px;
   width: 100px;
   float: left;
+  border-radius: 5em;
+  margin-right: 1em;
 }
 
 #filters {
@@ -85,4 +87,34 @@
 
 #funFacts {
   margin: 2em;
+}
+
+#about a, #about a:link, #about a:active {
+  text-decoration: none;
+  color: #000;
+}
+
+#about a:hover, #about a:focus {
+  color: #6EB4ED;
+}
+
+#about ul {
+  list-style: none;
+  display: block;
+}
+
+.repo-list {
+  border-top: 1px solid #6EB4ED;
+  margin-bottom: 2em;
+}
+
+#ajax-spinner h1 {
+  margin: 2rem;
+  display: inline-block;
+
+}
+
+#ajax-spinner img {
+  margin-top: 3rem;
+
 }
