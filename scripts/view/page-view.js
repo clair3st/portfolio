@@ -28,6 +28,8 @@
   };
 
   pageView.renderIndexPage = function() {
+    $('#ajax-spinner').fadeOut();
+
     Country.arrayAll.forEach(function(a) {
       $('#articles-section').append(a.toHtml());
       var optionTag = '<option value="' + a.continent + '">' + a.continent + '</option>';
