@@ -27,7 +27,7 @@
   };
 
   //append to the DOM
-  Country.fetchAll = function(nextFunction){
+  Country.fetchAll = function(){
     if (localStorage.pageData) {
       $.ajax({
         type: 'HEAD',
@@ -36,23 +36,23 @@
           var eTag = xhr.getResponseHeader('eTag');
           if (!localStorage.eTag || eTag !== localStorage.eTag) {
             localStorage.eTag = eTag;
-            Country.getAll(nextFunction);
+            Country.getAll();
           } else {
             Country.loadAll(JSON.parse(localStorage.pageData));
-            nextFunction();
+            pageView.renderIndexPage();
           }
         }
       });
     } else {
-      Country.getAll(nextFunction);
+      Country.getAll();
     }
   };
 
-  Country.getAll = function(nextFunction) {
+  Country.getAll = function() {
     $.getJSON('/data/data.json', function(data) {
       Country.loadAll(data);
       localStorage.pageData = JSON.stringify(data);
-      nextFunction();
+      pageView.renderIndexPage();
     });
   };
 
@@ -79,7 +79,7 @@
     });
   };
 
-  Country.fetchAll(pageView.renderIndexPage);
+  Country.fetchAll();
   module.Country = Country;
 
 })(window);
