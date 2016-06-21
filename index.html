@@ -27,6 +27,22 @@
     <li><strong>{{continent}}</strong>: {{numCountries}} countries</li>
   </script>
 
+  <script id="repo-template" type="text/x-handlebars-template">
+     <li class="repo-list">
+       <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a></li>
+       <p><strong>Description: </strong>{{description}}</p>
+       <p><strong>Primary Language: </strong>{{language}}</p> <!-- which programming language is most used in each project, from api -->
+       <p><strong>Created: </strong>{{created_at}}</p>
+       <p><strong>Last Updated: </strong>{{updated_at}}</p>
+       {{#if watchers_count}}
+         <p>{{watchers}} watching this repo</p>
+       {{/if}}
+       {{#if stargazers_count}}
+         <p>Number of people stargazing this repo: {{stargazers_count}}.</p>
+       {{/if}}
+     </li>
+   </script>
+
   </head>
   <body>
     <header class="clearfix page-header">
@@ -46,6 +62,10 @@
       </nav>
     </header>
     <main>
+      <section id="ajax-spinner">
+        <h1>Retrieving latest posts ...</h1>
+        <img src="img/wave.gif">
+      </section>
       <section id="articles-section" class="tab-content">
         <div id="filters">
           <select id="continent-filter">
@@ -67,7 +87,14 @@
       <section id="about" class="tab-content" class="container">
         <h1>About Me</h1>
         <img class="profile" src="img/leiden pic.jpg">
-        <p>I was born in Canberra, Australia and made the wild decision to quit my job and move to Seattle, USA. I love cats, travelling, the outdoors and taking photos.</p>
+        <p>I was born in Canberra, Australia and made the wild decision to quit my job and move to Seattle, USA. I love cats, travelling, the outdoors and taking photos. </p>
+        <p>I have an education in science (specifically, chemistry and genetics) and have embarked on the journey to learn how to code. I am currently enrolled in Codefellows coding school to facilitate this journey</p>
+        <section id="github-info">
+          <h1>Check out my github repositories:</h1>
+          <ul>
+            <li>Coding Projects Go Here</li>
+          </ul>
+        </section>
       </section>
     </main>
     <footer>
@@ -77,8 +104,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
     <script src="vendor/scripts/page.js" type="text/javascript"></script>
 
+    <script src="/githubToken.js"></script>
+
     <script src="scripts/model/render-data.js" type="text/javascript"></script>
+    <script src="scripts/model/repos.js"></script>
+
     <script src="scripts/view/page-view.js" type="text/javascript"></script>
+    <script src="scripts/view/repoView.js"></script>
 
     <script src="/scripts/controller/articleController.js"></script>
     <script src="/scripts/controller/aboutController.js"></script>
