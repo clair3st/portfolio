@@ -1,14 +1,6 @@
 (function(module) {
   var pageView = {};
 
-  pageView.handleMainNav = function () {
-    $('.main-nav').on('click','.tab', function() {
-      $('.tab-content').hide();
-      $('#' + $(this).attr('data-content')).fadeIn();
-    });
-    $('.main-nav .tab:first').click();
-  };
-
   pageView.handleContinentFilter = function() {
     $('#continent-filter').on('change', function(){
       if ($(this).val()) {
@@ -43,7 +35,6 @@
         $('#continent-filter').append(optionTag);
       };
     });
-    pageView.handleMainNav();
     pageView.handleContinentFilter();
     pageView.setTeasers();
     pageView.funFactsSection();
@@ -60,9 +51,6 @@
     $('.continents').text(Country.allContinents().length);
   };
 
-  Country.fetchAll(pageView.renderIndexPage);
-
-  // Country.fetchAll(pageView.funFactsSection);
   module.pageView = pageView;
 
 })(window);

@@ -37,9 +37,9 @@
       <nav class="main-nav">
         <div class="icon-menu"></div>
         <ul>
-          <li class="tab" data-content="articles-section"><a href="#" class="icon-home"> Portfolio</a></li>
-          <li class='tab' data-content="funFacts"><a href="#" class="icon-lab">Fun Facts</a></li>
-          <li class="tab" data-content="about"><a href="#" class="icon-lab"> About Me</a></li>
+          <li class="tab" data-content="articles-section"><a href="/" class="icon-home"> Portfolio</a></li>
+          <li class='tab' data-content="funFacts"><a href="/funfacts" class="icon-lab">Fun Facts</a></li>
+          <li class="tab" data-content="about"><a href="/about" class="icon-lab"> About Me</a></li>
           <li><a href="http://github.com/" class="icon-github"> GitHub</a></li>
           <li><a href="https://www.linkedin.com/" class="icon-linkedin"> LinkedIn</a></li>
         </ul>
@@ -73,10 +73,16 @@
     <footer>
       &copy; 2016 Claire Gatenby
     </footer>
-    <script src="vendor/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="vendor/scripts/jquery-2.2.4.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script src="vendor/scripts/page.js" type="text/javascript"></script>
 
     <script src="scripts/model/render-data.js" type="text/javascript"></script>
     <script src="scripts/view/page-view.js" type="text/javascript"></script>
+
+    <script src="/scripts/controller/articleController.js"></script>
+    <script src="/scripts/controller/aboutController.js"></script>
+    <script src="/scripts/controller/funFactsController.js"></script>
+    <script src="/scripts/controller/routes.js"></script>
   </body>
 </html>
