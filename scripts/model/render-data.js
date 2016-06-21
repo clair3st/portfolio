@@ -79,6 +79,7 @@
     });
   };
 
+  Country.fetchAll(pageView.renderIndexPage);
   module.Country = Country;
 
 })(window);
