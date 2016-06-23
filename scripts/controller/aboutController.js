@@ -2,6 +2,7 @@
   var aboutController = {};
 
   aboutController.index = function() {
+    $('ajax-spinner').hide();
     $('.tab-content').hide();
     $('#about').fadeIn();
   };
