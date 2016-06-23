@@ -1,11 +1,6 @@
 .page-header, footer {
-  background-image:
-  linear-gradient(rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)), url('../img/trees.png');
   color: #fff;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-bottom: 15%;
+  padding-bottom: 2%;
 }
 
 .header-title {
@@ -18,19 +13,14 @@
   clear: both;
 }
 
-#about {
-  margin: 1em 1.5em 10em 1.5em;
-  width: 90%;
+#about, #github-info {
+  margin: auto;
+  max-width: 60%;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-.template {
-  display: none;
-}
-
-article:not(:last-child) {
-  border-bottom: 2px solid #3c3c3c;
-}
-
-#github-info {
-  margin-top: 5em;
+#home {
+  height: 400px;
+  width: 150px;
+  display: inline-block;
 }

@@ -89,16 +89,16 @@
   margin: 2em;
 }
 
-#about a, #about a:link, #about a:active {
+#github-info a, #github-info a:link, #github-info a:active {
   text-decoration: none;
   color: #000;
 }
 
-#about a:hover, #about a:focus {
+#github-info a:hover, #github-info a:focus {
   color: #6EB4ED;
 }
 
-#about ul {
+#github-info ul {
   list-style: none;
   display: block;
 }
