@@ -27,20 +27,20 @@
     });
   };
 
-  pageView.renderIndexPage = function() {
-    $('#ajax-spinner').fadeOut();
-
-    Country.arrayAll.forEach(function(a) {
-      $('#articles-section').append(a.toHtml());
-      var optionTag = '<option value="' + a.continent + '">' + a.continent + '</option>';
-      if ($('#continent-filter option[value="' + a.continent + '"]').length === 0) {
-        $('#continent-filter').append(optionTag);
-      };
-    });
-    pageView.handleContinentFilter();
-    pageView.setTeasers();
-    pageView.funFactsSection();
-  };
+  // pageView.renderIndexPage = function() {
+  //   $('#ajax-spinner').fadeOut();
+  //
+  //   Country.arrayAll.forEach(function(a) {
+  //     $('#articles-section').append(a.toHtml());
+  //     var optionTag = '<option value="' + a.continent + '">' + a.continent + '</option>';
+  //     if ($('#continent-filter option[value="' + a.continent + '"]').length === 0) {
+  //       $('#continent-filter').append(optionTag);
+  //     };
+  //   });
+  //   pageView.handleContinentFilter();
+  //   pageView.setTeasers();
+  //   pageView.funFactsSection();
+  // };
 
   pageView.funFactsSection = function() {
     var template = Handlebars.compile($('#continentStats-template').html());
