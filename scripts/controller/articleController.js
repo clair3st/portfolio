@@ -1,10 +1,11 @@
 (function(module) {
-  var articleController = {};
+  var projectController = {};
 
-  articleController.index = function() {
+  projectController.index = function() {
+    $('#ajax-spinner').hide();
     $('.tab-content').hide();
-    $('#articles-section').fadeIn();
+    $('#github-info').fadeIn();
   };
 
-  module.articleController = articleController;
+  module.projectController = projectController;
 })(window);
