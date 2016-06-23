@@ -4,6 +4,12 @@ body{
   background-color: #fff;
   font-family: 'Kameron', serif;
   position: relative;
+  background-image:
+  linear-gradient(rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)), url('../img/trees.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 
@@ -33,11 +39,16 @@ article{
 footer {
   height: 2em;
   padding: 1em;
-  border-top: 1px solid #3c3c3c;
+  text-align: right;
+  vertical-align: baseline;
 }
 
 time {
   font-weight: bold;
+}
+
+section {
+  padding: 2em;
 }
 
 /*LINK STYLES
