@@ -6,7 +6,7 @@
   };
 
   repoView.renderRepos = function() {
-    $('#about ul').empty().append(
+    $('#github-info ul').empty().append(
       repos.withTheAttribute('name')
       .map(repoCompiler)
     );
